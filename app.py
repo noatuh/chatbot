@@ -39,12 +39,12 @@ class VerbalChatbot:
             print("An error occurred while trying to speak:", str(e))
 
     def chat(self):
-        self.speak("Hello! Speak 'bye' to exit.")
+        self.speak("Hello! Speak 'goodbye' to exit.")
         while True:
             user_input = self.listen()
             if user_input:
                 print("You:", user_input)
-                if user_input == "bye":
+                if user_input == "goodbye":
                     self.speak(self.responses.get("bye"))
                     break
                 response = self.responses.get(user_input, "Sorry, I don't know that.")
